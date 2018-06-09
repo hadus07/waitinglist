@@ -6,20 +6,19 @@
     <input type="number" name="time" placeholder="minutes" required>
     <button>Add</button>
 </form>
-
 <div class="cont">
 
     % for i in range(len(ls)):
         
         <div class="item">
             <div class="name-cont">
-                <h2>{{i+1}}<h2>
+                <h3>{{i+1}}<h3>
                 <div>
-                    <h3>{{ls[i]['name']}}</h3>
+                    <h4>{{ls[i]['name']}}</h4>
                     <p>{{ls[i]['email']}}</p>
                 </div>  
             </div>
-            <h1>{{ls[i]['time']}} mins</h1>
+            <h3>{{ls[i]['time']}} mins</h3>
             <div class="item-btn">
                 <form action="/call" method="POST">
                     <input type="text" name="call_id" value="{{i}}" style="display: none;">
@@ -34,5 +33,5 @@
 
     % end
 </div>
-
-% include('footer.tpl')
+</body>
+</html>

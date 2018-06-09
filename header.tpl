@@ -16,7 +16,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: radial-gradient(#FFF176, #F57F17);
+            background: linear-gradient(to right, #fdc830, #f37335);;
             background-size: cover;
             color: white;
             font-family: Arial, Helvetica, sans-serif;
@@ -27,7 +27,7 @@
             padding: 20px;
             text-align: center;
             margin-top: 100px;
-            box-shadow: 0px 10px 15px -6px black;
+            box-shadow: 0px 8px 6px -6px black;
             background-color: #f5a100;
         }
 
@@ -37,7 +37,6 @@
             display: inline-block;
             outline: none;
             font-size: 14px;
-            font-weight: bold;
             border: none;
             background-color: #f6ad07;
         }
@@ -69,7 +68,7 @@
 
         .item {
             width: 100%;
-            padding: 20px;
+            padding: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -86,7 +85,7 @@
             display: flex;
             align-items: center;
         }
-        .name-cont h2 {
+        .name-cont h3 {
             margin-right: 50px;
         }
         .name-cont div {

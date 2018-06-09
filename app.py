@@ -7,10 +7,6 @@ msg = MIMEMultipart()
 msg['From'] = "waitinglist.bi@gmail.com"
 msg['Subject'] = "It's your turn!"
 
-body = "We would like to inform you that it is now your turn in \"SomeOffice\".\nPlease come and enjoy/join\n\nSincerely,\n\nSomeOffice."
-msg.attach(MIMEText(body, 'plain'))
-text = msg.as_string()
-
 server = smtplib.SMTP('smtp.gmail.com', 587)
 server.starttls()
 server.login("waitinglist.bi@gmail.com", "waitinglist07")
@@ -47,10 +43,12 @@ def handle_delete():
 def handle_call():
     call_id = int(request.forms.call_id)
     if(call_id >= 0):
-
+        name = ls[call_id]['name']
+        body = "Dear " + name + "\nWe would like to inform you that it is now your turn in \"SomeOffice\".\nPlease come and enjoy/join\n\nSincerely,\n\nSomeOffice."
+        msg.attach(MIMEText(body, 'plain'))
+        text = msg.as_string()
         msg['To'] = ls[call_id]['email']
         server.sendmail("waitinglist.bi@gmail.com", ls[call_id]['email'], text)
-        server.quit()
 
         ls.pop(call_id)
 

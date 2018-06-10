@@ -3,7 +3,7 @@
 <form class="register" action="start" method="POST">
     <input type="text" name="name" placeholder="name" required autocomplete="name">
     <input type="email" name="email" placeholder="email" required autocomplete="email">
-    <input type="number" name="time" placeholder="minutes" required>
+    <input type="number" name="num" placeholder="number of people" required>
     <button>Add</button>
 </form>
 <div class="cont">
@@ -18,7 +18,13 @@
                     <p>{{ls[i]['email']}}</p>
                 </div>  
             </div>
-            <h3>{{ls[i]['time']}} mins</h3>
+            <h3>{{ls[i]['num']}}
+                % if(int(ls[i]['num']) == 1):
+                    person
+                % else:
+                    people
+                % end
+            </h3>
             <div class="item-btn">
                 <form action="/call" method="POST">
                     <input type="text" name="call_id" value="{{i}}" style="display: none;">

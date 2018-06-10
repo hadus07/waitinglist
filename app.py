@@ -24,7 +24,7 @@ def handle_submit():
     ls.append(dict(
         name = request.forms.name,
         email = request.forms.email,
-        time = request.forms.time,
+        num = request.forms.num,
     ))
 
     return dict(ls = ls)

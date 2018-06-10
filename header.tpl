@@ -16,7 +16,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(to right, #fdc830, #f37335);;
+            background: linear-gradient(to right, #2193b0, #6dd5ed);
             background-size: cover;
             color: white;
             font-family: Arial, Helvetica, sans-serif;
@@ -28,7 +28,18 @@
             text-align: center;
             margin-top: 100px;
             box-shadow: 0px 8px 6px -6px black;
-            background-color: #f5a100;
+            /* background-color: #f5a100; */
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        input {
+            color: #0069e4;
+        }
+
+        input:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0 30px black inset;
+            box-shadow: 0 0 0 30px black inset;
+            -webkit-text-fill-color: #0069e4 !important;
         }
 
         input, button {
@@ -36,9 +47,10 @@
             width: 200px;
             display: inline-block;
             outline: none;
-            font-size: 14px;
+            font-size: 16px;
             border: none;
-            background-color: #f6ad07;
+            background-color: black;
+            
         }
 
         input:hover, input:focus {
@@ -46,34 +58,42 @@
             background-color: #eee;
         }
 
+        input::placeholder {
+            color: #bebebe;
+        }
+
         button {
-            background-color: #0069e4;;
+            background-color: #0069e4;
             width: 100px;
             margin-left: 20px;
-            color: white
+            color: white;
         }
 
         button:hover {
             transition: all .3s cubic-bazier(1, 1, 0.5, 1.1);
-            transform: scale(1.1) rotate(2deg);
+            transform: scale(1.1);
             box-shadow: 0 8px 6px -6px black;
             cursor: pointer;
         }
 
         .cont {
-            margin-top: 100px;
+            margin-top: 60px;
             width: 60%;
-            color: #444;
+            color: #222;
+            perspective: 1000px;
         }
 
         .item {
             width: 100%;
-            padding: 10px;
+            padding: 20px 10px;
+            margin-bottom: 5px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #777;
+            border: 1px solid #000;
             text-align: left;
+            box-shadow: 0 8px 6px -6px black;
+            transform: rotateX(18deg);
         }
 
         .item p {

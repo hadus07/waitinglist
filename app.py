@@ -27,7 +27,13 @@ def handle_submit():
         num = request.forms.num,
     ))
 
+    file = open('database.txt', 'w')
+
+    for i in range(len(ls)):
+        file.write(ls[i]['name'] + '\t' + ls[i]['email'] + '\t' + ls[i]['num'] + '\n\n')
+
     return dict(ls = ls)
+
 
 @route('/delete', method='POST')
 @view('index')
